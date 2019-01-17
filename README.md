@@ -1,7 +1,10 @@
 # FarmstayInfoSys
 A website based on php and bootstrap, used for farmstay information management.
 
+The database is MySQL, please use create.sql to set up database before launch the website.
+
 一套基于php和bootstrap的农家乐信息管理系统。
+数据库是MySQL，启用网站前请先用create.sql建数据库。
 
 包含如下功能：
 
