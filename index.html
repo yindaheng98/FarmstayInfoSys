@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>登录</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normal.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="col-md-offset-3">
+        <div class="row"><br><br><br><br></div>
+        <form action="index.php" method="post" class="form-horizontal">
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="username" class="control-label">用户名</label>
+                    <input type="text" placeholder="用户名" name="username" id="username" class="form-control input-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="password" class="control-label">密码&emsp;</label>
+                    <input type="password" placeholder="密码" name="password" id="password" class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="character" value="user" checked>
+                            用户登录
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="character" value="business">
+                            商户登录
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <input type='submit' value="登录" id="submit" class="row btn btn-primary btn-lg btn-block">
+                </div>
+            </div>
+        </form>
+        <div class="row"><br><br></div>
+        <div class="row">
+            <a href="userRegister.html" class="col-md-4 text-center">用户注册</a>
+            <a href="businessRegister.html" class="col-md-4 text-center">商户注册</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

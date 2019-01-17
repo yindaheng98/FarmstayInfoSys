@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>用户注册</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normal.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row"><br><br><br><br></div>
+    <form action="userRegister.php" method="post" class="form-horizontal col-md-offset-3">
+        <div class="row">
+            <div class="form-group col-md-8 has-feedback" id="username-group">
+                <label for="username">用户名</label>
+                <input type="text" placeholder="用户名" name="username" id="username" class="form-control input-lg"
+                       onkeyup="check_username('user')">
+                <span id="username-status" class="glyphicon form-control-feedback"
+                      aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-8 has-feedback" id="password-group">
+                <label for="password">密码</label>
+                <input type="password" placeholder="密码" name="password" id="password" class="form-control"
+                       onkeyup="check_password()">
+                <span id="password-status" class="glyphicon form-control-feedback"
+                      aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-8 has-feedback" id="confirm-group">
+                <label for="confirm">确认密码</label>
+                <input type="password" placeholder="确认密码" name="confirm" id="confirm" class="form-control"
+                       onkeyup="check_confirmpassword()">
+                <span id="confirm-status" class="glyphicon form-control-feedback"
+                      aria-hidden="true"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <input type='submit' value="注册" id="submit" class="row btn btn-primary btn-lg btn-block"/>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/RegisterCheck.js"></script>
+</body>
+</html>

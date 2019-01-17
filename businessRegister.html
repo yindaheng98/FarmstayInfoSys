@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>商户注册</title>
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normal.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <form action="businessRegister.php" method="post" enctype="multipart/form-data"
+          class="form-horizontal col-md-offset-3">
+        <fieldset>
+            <legend>登录信息</legend>
+            <div class="row">
+                <div class="form-group col-md-8 has-feedback" id="username-group">
+                    <label for="username">用户名</label>
+                    <input type="text" placeholder="用户名" name="username" id="username" class="form-control input-lg"
+                           onkeyup="check_username('business')">
+                    <span id="username-status" class="glyphicon form-control-feedback"
+                          aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8 has-feedback" id="password-group">
+                    <label for="password">密码</label>
+                    <input type="password" placeholder="密码" name="password" id="password" class="form-control"
+                           onkeyup="check_password()">
+                    <span id="password-status" class="glyphicon form-control-feedback"
+                          aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8 has-feedback" id="confirm-group">
+                    <label for="confirm">确认密码</label>
+                    <input type="password" placeholder="确认密码" name="confirm" id="confirm" class="form-control"
+                           onkeyup="check_confirmpassword()">
+                    <span id="confirm-status" class="glyphicon form-control-feedback"
+                          aria-hidden="true"></span>
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>商铺信息</legend>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="businessname">商铺名</label>
+                    <input type="text" placeholder="商铺名" name="businessname" id="businessname"
+                           class="form-control input-lg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="discription">商铺描述</label>
+                    <textarea placeholder="商铺描述" name="discription" id="discription" class="form-control"
+                              rows="3"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-2">
+                    <label for="province" style="visibility: hidden">省</label>
+                    <select name="province" id="province" onclick="get_city()" style="visibility: hidden"
+                            class="form-control"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="city" style="visibility: hidden">市</label>
+                    <select name="city" id="city" onclick="get_district()" style="visibility: hidden"
+                            class="form-control"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="district" style="visibility: hidden">区</label>
+                    <select name="district" id="district" onclick="get_street()" style="visibility: hidden"
+                            class="form-control"></select>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="street" style="visibility: hidden">街道</label>
+                    <select name="street" id="street" style="visibility: hidden"
+                            class="form-control"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="address">详细地址</label>
+                    <input type="text" placeholder="详细地址" name="address" id="address"
+                           class="form-control">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="licence">上传营业执照</label>
+                    <input type="file" name="licence" accept="image/jpeg,image/png" id="licence"/>
+                    <p class="help-block">仅支持不超过10M的jpg或png格式文件</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-md-8">
+                    <label for="photo">上传商铺照片</label>
+                    <input type="file" name="photo" accept="image/jpeg,image/png" id="photo"/>
+                    <p class="help-block">仅支持不超过10M的jpg或png格式文件</p>
+                </div>
+            </div>
+        </fieldset>
+        <div class="row">
+            <div class="col-md-8">
+                <input type='submit' value="注册" id="submit" class="btn btn-primary btn-lg btn-block"/>
+            </div>
+        </div>
+    </form>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/RegisterCheck.js"></script>
+    <script src="js/CityPicker.js"></script>
+    <script>get_province(true);</script>
+</div>
+</body>
+</html>
