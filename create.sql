@@ -53,7 +53,6 @@ flush privileges;
 
 drop database if exists City;
 create database City DEFAULT CHARACTER SET utf8;
-use City;
 create user City identified by 'City';
 GRANT SELECT ,UPDATE ,INSERT ON City.* TO 'City'@'localhost' IDENTIFIED BY 'City';
 flush privileges;

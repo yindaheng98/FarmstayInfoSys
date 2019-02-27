@@ -102,7 +102,7 @@ if (isset($_POST['province']) and !empty($_POST['province']))
                 <th></th>
             </tr>
             <?php
-            $SQL = 'SELECT 用户名,商户名称,商户位置,详细地址,商户评级,商户照片 FROM 商户';
+            $SQL = 'SELECT 用户名,商户名称,商户描述,商户位置,详细地址,商户评级,商户照片 FROM 商户';
             if (isset($_POST['businessname']) and !empty($_POST['businessname']) and !empty($location))
                 $SQL = $SQL . " WHERE 商户名称 LIKE '%{$_POST['businessname']}%' AND 商户位置 LIKE '$location'";
             elseif (!empty($location))
