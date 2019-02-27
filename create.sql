@@ -1,4 +1,7 @@
-﻿CREATE table 用户
+﻿drop database if exists Farmstay;
+create database Farmstay DEFAULT CHARACTER SET utf8;
+use Farmstay;
+CREATE table 用户
 (
 用户名 varchar(255) not null,
 密码 varchar(255) not null,
@@ -43,3 +46,14 @@ foreign key(商户) references 商户(用户名)
 on update cascade
 on delete cascade
 );
+
+create user Farmstay identified by 'Farmstay';
+GRANT SELECT ,UPDATE ,INSERT ON Farmstay.* TO 'Farmstay'@'localhost' IDENTIFIED BY 'Farmstay';
+flush privileges;
+
+drop database if exists City;
+create database City DEFAULT CHARACTER SET utf8;
+use City;
+create user City identified by 'City';
+GRANT SELECT ,UPDATE ,INSERT ON City.* TO 'City'@'localhost' IDENTIFIED BY 'City';
+flush privileges;

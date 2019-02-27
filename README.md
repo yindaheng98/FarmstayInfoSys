@@ -1,7 +1,7 @@
 # FarmstayInfoSys
 A website based on php and bootstrap, used for farmstay information management.
 
-The database is MySQL, please use create.sql to set up database before launch the website.
+The database is MySQL, please use create.sql to set up database and import City.sql to the database 'City' before launch the website.
 
 一套基于php和bootstrap的农家乐信息管理系统。
 数据库是MySQL，启用网站前请先用create.sql建数据库。
@@ -13,3 +13,9 @@ The database is MySQL, please use create.sql to set up database before launch th
 3. 农家乐游客用户注册
 4. 按地区和名称检索农家乐商户
 5. 游客对农家乐商户进行评级和评论
+
+使用方法：
+1. 用create.sql建立两个数据库Farmstay和City
+2. 用数据库导入工具把City.sql导入到City数据库中
+3. 把网站放到服务器上
+4. Have fun
