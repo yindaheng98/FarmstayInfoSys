@@ -1,4 +1,4 @@
-CREATE table 用户
+﻿CREATE table 用户
 (
 用户名 varchar(255) not null,
 密码 varchar(255) not null,
@@ -31,7 +31,7 @@ id bigint auto_increment,
 商户 varchar(255) not null,
 内容 varchar(255) not null,
 打分 tinyint not null,
-时间 datetime not null,用户
+时间 datetime not null,
 图片 varchar(255) null,
 primary key(id),
 index(用户),
