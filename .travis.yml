@@ -3,10 +3,13 @@ branches:
     - master
 script:
   - rm -rf ./*{.sql,.md}
+  - mkdir .temp
+  - cd .temp
   - git clone https://$GH_TOKEN@github.com/yindaheng98/yindaheng98.top.git
   - rm -rf yindaheng98.top/apps/php/FarmstayInfoSys/*
-  - cp -rf ./*.* ./yindaheng98.top/apps/php/FarmstayInfoSys
-  - cd ./yindaheng98.top
+  - cd ..
+  - cp -rf ./*.* ./.temp/yindaheng98.top/apps/php/FarmstayInfoSys
+  - cd ./.temp/yindaheng98.top
   - git add -A
   - git commit -m 'TravisCI Deployed FarmstayInfoSys'
   - git push -u https://$GH_TOKEN@github.com/yindaheng98/yindaheng98.top.git HEAD:master --force
