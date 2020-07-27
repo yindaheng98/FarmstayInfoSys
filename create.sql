@@ -1,4 +1,5 @@
-﻿drop database if exists Farmstay;
+set names utf8;
+drop database if exists Farmstay;
 create database Farmstay DEFAULT CHARACTER SET utf8;
 use Farmstay;
 CREATE table 用户
@@ -48,11 +49,5 @@ on delete cascade
 );
 
 create user Farmstay identified by 'Farmstay';
-GRANT SELECT ,UPDATE ,INSERT ON Farmstay.* TO 'Farmstay'@'localhost' IDENTIFIED BY 'Farmstay';
-flush privileges;
-
-drop database if exists City;
-create database City DEFAULT CHARACTER SET utf8;
-create user City identified by 'City';
-GRANT SELECT ,UPDATE ,INSERT ON City.* TO 'City'@'localhost' IDENTIFIED BY 'City';
+GRANT SELECT ,UPDATE ,INSERT ON Farmstay.* TO 'Farmstay'@'%';
 flush privileges;
